@@ -1,0 +1,10 @@
+files:
+- script: https://raw.githubusercontent.com/paperbenni/blender-update/master/2.80.sh
+game:
+  appid: 365670
+  exe: $GAMEDIR/2.80.sh
+installer:
+- chmodx: script
+- move:
+    dst: $GAMEDIR/2.80.sh
+    src: script
