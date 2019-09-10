@@ -1,0 +1,26 @@
+name: smash bros infinite mod
+version: 3.0
+runner: dolphin
+files:
+  - gecko: https://gecko.surge.sh/boot.elf
+  - launcher: https://raw.githubusercontent.com/paperbenni/lutris/master/ssbb/infinite.sh
+  - smash: "N/A:Select Smash Bros Brawl ISO file"
+  - infinite: "N/A: sd.raw file from infinite mod"
+game:
+  main_file: $GAMEDIR/gecko.elf
+installer:
+  - chmodx: launcher
+  - move:
+    src: launcher
+    dst: $GAMEDIR/infinite.sh
+  - move:
+    src: smash
+    dst: $GAMEDIR/smash.iso
+  - move:
+    src: gecko
+    dst: $GAMEDIR/gecko.elf
+  - move:
+    src: infinite
+    dst: $GAMEDIR/infinite.raw
+system:
+  prelaunch_command: $GAMEDIR/infinite.sh
