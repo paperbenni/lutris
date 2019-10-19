@@ -1,0 +1,14 @@
+files:
+ - jar: https://github.com/Anuken/Mindustry/releases/download/v96/Mindustry.jar
+ - starter: https://raw.githubusercontent.com/paperbenni/lutris/master/mindustry/start.sh
+game:
+  appid: 1127400
+  exe: $GAMEDIR/start.sh
+installer:
+- chmodx: starter
+- move:
+    dst: $GAMEDIR/start.sh
+    src: starter
+- move:
+    dst: $GAMEDIR/Mindustry.jar
+    src: jar
