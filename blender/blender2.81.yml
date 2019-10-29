@@ -1,9 +1,9 @@
 files:
-- script: https://raw.githubusercontent.com/paperbenni/blender-update/master/2.81.sh
+  - script: https://raw.githubusercontent.com/paperbenni/blender-update/master/2.81.sh
 game:
   exe: $GAMEDIR/2.81.sh
 installer:
-- chmodx: script
-- move:
-    dst: $GAMEDIR/2.81.sh
-    src: script
+  - chmodx: script
+  - move:
+      dst: $GAMEDIR/2.81.sh
+      src: script
